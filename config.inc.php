@@ -8,7 +8,7 @@
 * @package redaxo4.3
 * @version 0.1
 * $Id$:
-*/ 
+*/
 
 // ERROR_REPORTING
 ////////////////////////////////////////////////////////////////////////////////
@@ -60,42 +60,42 @@ $REX['ADDON'][$mypage]['params_cast'] = array (
 ////////////////////////////////////////////////////////////////////////////////
 // --- DYN
 $REX["ADDON"]["addon_template"]["settings"] = array (
-  'TEXTINPUT' => 
+  'TEXTINPUT' =>
   array (
     1 => 'Textfeld 1',
   ),
-  'TEXTAREA' => 
+  'TEXTAREA' =>
   array (
     1 => 'Textarea 1',
   ),
-  'SELECT' => 
+  'SELECT' =>
   array (
     1 => '1',
   ),
-  'MULTISELECT' => 
+  'MULTISELECT' =>
   array (
-    1 => 
+    1 =>
     array (
       0 => '1',
     ),
   ),
-  'MEDIA' => 
+  'MEDIA' =>
   array (
     1 => '',
   ),
-  'MEDIALIST' => 
+  'MEDIALIST' =>
   array (
     1 => '',
   ),
-  'LINK' => 
+  'LINK' =>
   array (
     1 => '',
   ),
-  'LINK_NAME' => 
+  'LINK_NAME' =>
   array (
     1 => '',
   ),
-  'LINKLIST' => 
+  'LINKLIST' =>
   array (
     1 => '',
   ),
@@ -115,24 +115,16 @@ if ($REX['REDAXO'])
        require_once $include;
      }
   }
-  
+
   $pattern = $myroot.'classes/class.*.inc.php';
   $include_files = glob($pattern);
-  
+
   if(is_array($include_files) && count($include_files) > 0){
      foreach ($include_files as $include)
      {
        require_once $include;
      }
   }
-}
-
-// BACKEND CSS
-////////////////////////////////////////////////////////////////////////////////
-$header = '  <link rel="stylesheet" type="text/css" href="../files/addons/'.$mypage.'/backend.css" media="screen, projection, print" />';
-
-if ($REX['REDAXO']) {
-  rex_register_extension('PAGE_HEADER', 'rexdev_header_add',array($header));
 }
 
 // SUBPAGES

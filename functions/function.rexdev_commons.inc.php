@@ -170,47 +170,6 @@ if (!function_exists('a720_include_contents'))
   }
 }
 
-/**
-  * Generische Funktion zum Einbinden von CSS, JS, .. ins Redaxo Backend
-  *
-  * @param $params Extension-Point Parameter
-  *
-  * @author rexdev.de
-  * @package redaxo4
-  * @version 0.1
-  * $Id$:
-  *
-  * Beispiel:
-  * ---------------------------------------------------------------
-  * // include als array (zwingend, auch wenn nur ein wert!)
-  * $inc = array (
-  * '<link rel="stylesheet" type="text/css" href="../files/addons/'.$mypage.'/backend.css" />,
-  * '<script type="text/javascript" src="../files/addons/'.$mypage.'/foo.js"></script>'
-  * );
-  *
-  * // include per 3. parameter an ep übergeben
-  * if ($REX['REDAXO']) {
-  *   include_once $myroot.'/functions/function.a720_backend_header.inc.php';
-  *   rex_register_extension('PAGE_HEADER', 'a720_backend_header', $inc);
-  * }
-  * ------------------------------------------------------------------------------
-  */
-if(!function_exists('a720_backend_header'))
-{
-  function a720_backend_header($params) {
-
-    if (is_array($params) && count($params)>2) {
-      foreach($params as $key => $val) {
-        if($key !== 'subject' && $key !== 'extension_point') {
-        $params['subject'] .= "\n".$val;
-        }
-      }
-    }
-
-    return $params['subject'];
-  }
-}
-
 
 /**
   * a720_scandir Funktion - Recursiver Scan eines Verzeichnisses
@@ -398,7 +357,7 @@ if (!function_exists('a720_saveConf'))
   function a720_saveConf($myCONF)
   {
     global $REX,$mypage;
-  
+
     // SAVE SETTINGS
     $DYN    = '$REX["ADDON"]["'.$mypage.'"]["settings"] = '.stripslashes(var_export($myCONF,true)).';';
     $config = $REX['INCLUDE_PATH'].'/addons/'.$mypage.'/config.inc.php';
@@ -406,7 +365,7 @@ if (!function_exists('a720_saveConf'))
     {
       // UPDATE REX
       $REX['ADDON'][$mypage]['settings'] = $myCONF;
-  
+
       return true;
     }
     else
@@ -449,11 +408,11 @@ if (!function_exists('a720_cast'))
           case 'unset':
             unset($request[$key]);
             break;
-  
+
           case 'nl_2_array':
             $request[$key] = a720_nl_2_array($request[$key]);
             break;
-  
+
           default:
             $request[$key] = rex_request($key,$cast);
         }

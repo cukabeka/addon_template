@@ -18,6 +18,18 @@ $faceless = rex_request('faceless', 'string');
 
 if($faceless != 1)
 {
+
+  // BACKEND CSS
+  //////////////////////////////////////////////////////////////////////////////
+  $header =
+    PHP_EOL.'<!-- ADDON TEMPLATE -->'.
+    PHP_EOL.'  <link rel="stylesheet" type="text/css" href="../files/addons/'.$mypage.'/backend.css" media="screen, projection, print" />'.
+    PHP_EOL.'<!-- /ADDON TEMPLATE -->'.PHP_EOL;
+  $header_func = 'return $params[\'subject\'].\''.$header.'\';';
+
+  rex_register_extension('PAGE_HEADER', create_function('$params',$header_func));
+
+
   // REX BACKEND LAYOUT TOP
   //////////////////////////////////////////////////////////////////////////////
   require $REX['INCLUDE_PATH'] . '/layout/top.php';
