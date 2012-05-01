@@ -107,14 +107,23 @@ $REX["ADDON"]["addon_template"]["settings"] = array (
 ////////////////////////////////////////////////////////////////////////////////
 if ($REX['REDAXO'])
 {
-  foreach (glob($myroot.'functions/function.*.inc.php') as $include)
-  {
-    require_once $include;
+  $pattern = $myroot.'functions/function.*.inc.php';
+  $include_files = glob($pattern);
+  if(is_array($include_files) && count($include_files) > 0){
+     foreach ($include_files as $include)
+     {
+       require_once $include;
+     }
   }
-
-  foreach (glob($myroot.'classes/class.*.inc.php') as $include)
-  {
-    require_once $include;
+  
+  $pattern = $myroot.'classes/class.*.inc.php';
+  $include_files = glob($pattern);
+  
+  if(is_array($include_files) && count($include_files) > 0){
+     foreach ($include_files as $include)
+     {
+       require_once $include;
+     }
   }
 }
 
@@ -123,7 +132,7 @@ if ($REX['REDAXO'])
 $header = '  <link rel="stylesheet" type="text/css" href="../files/addons/'.$mypage.'/backend.css" media="screen, projection, print" />';
 
 if ($REX['REDAXO']) {
-  rex_register_extension('PAGE_HEADER', 'a720_backend_header',array($header));
+  rex_register_extension('PAGE_HEADER', 'rexdev_header_add',array($header));
 }
 
 // SUBPAGES
