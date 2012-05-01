@@ -25,7 +25,7 @@ require_once $myroot.'functions/function.a720_incparse.inc.php';
 ////////////////////////////////////////////////////////////////////////////////
 $help_includes = array
 (
-  'Hilfe'     => array('_readme.textile'    ,'textile'),
+  'Hilfe'     => array('README.textile'    ,'textile'),
   'Changelog' => array('_changelog.textile' ,'textile')
 );
 

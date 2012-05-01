@@ -20,7 +20,7 @@ $func    = rex_request('func',    'string');
 // SUBNAVIGATION ITEMS
 ////////////////////////////////////////////////////////////////////////////////
 $chapterpages = array (
-''                => array('Readme'                        ,'_readme.textile'                             ,'textile'),
+''                => array('Readme'                        ,'README.textile'                             ,'textile'),
 'changelog'       => array('Changelog'                     ,'_changelog.textile'                          ,'textile'),
 'text_demo'       => array('<em>TXT include</em>'          ,'pages/_txt_include_example.txt'              ,'txt'),
 'php_demo'        => array('<em>PHP include</em>'          ,'pages/_php_include_example.php'              ,'php'),

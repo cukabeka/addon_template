@@ -40,4 +40,4 @@ h3. Download
 * @ Redaxo: "http://www.redaxo.de/180-0-addon-details.html?addon_id=720":http://www.redaxo.de/180-0-addon-details.html?addon_id=720
 * SVN Versionen: "http://svn.rexdev.de/redmine/projects/addon-template/activity":http://svn.rexdev.de/redmine/projects/addon-template/activity
 
-bc. Dies ist der Inhalt der Textile formatierten Datei "_readme.textile"
+bc. Dies ist der Inhalt der Textile formatierten Datei "README.textile"
