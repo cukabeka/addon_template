@@ -33,7 +33,7 @@ $tbl->setQuery($query);
 
 if($tbl->getErrno()==1146 && $func!='setupdb')
 {
-  echo rex_info('Datenbank Tabelle <em>'.$AddonDBTable.'</em> ist nicht angelegt. <a href="http://rex43.loc/redaxo/index.php?page=addon_template&subpage=database&func=setupdb">Tabelle anlegen.</a>');
+  echo rex_info('Datenbank Tabelle <em>'.$AddonDBTable.'</em> ist nicht angelegt. <a href="index.php?page=addon_template&subpage=database&func=setupdb">Tabelle anlegen.</a>');
 }
 else
 {
