@@ -3,11 +3,10 @@
 * Addon_Template
 *
 * @author http://rexdev.de
-* @link   http://www.redaxo.de/180-0-addon-details.html?addon_id=720
+* @link   https://github.com/jdlx/addon_template
 *
 * @package redaxo4.3
-* @version 0.1
-* $Id$:
+* @version 0.2.0
 */
 
 // ERROR_REPORTING
@@ -33,8 +32,8 @@ $Revision = '';
 $REX['ADDON'][$mypage]['VERSION'] = array
 (
 'VERSION'      => 0,
-'MINORVERSION' => 1,
-'SUBVERSION'   => preg_replace('/[^0-9]/','',"$Revision$")
+'MINORVERSION' => 2,
+'SUBVERSION'   => 0,
 );
 $REX['ADDON']['version'][$mypage]     = implode('.', $REX['ADDON'][$mypage]['VERSION']);
 $REX['ADDON']['author'][$mypage]      = 'rexdev.de';

@@ -3,11 +3,10 @@
 * Addon_Template
 *
 * @author http://rexdev.de
-* @link   http://www.redaxo.de/180-0-addon-details.html?addon_id=720
+* @link   https://github.com/jdlx/addon_template
 *
 * @package redaxo4.3
-* @version 0.1
-* $MID: settings.inc.php 30 2010-06-21 02:58:00Z jeffe $:
+* @version 0.2.0
 */
 
 // ADDON PARAMETER AUS URL HOLEN
