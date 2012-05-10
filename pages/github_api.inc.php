@@ -6,7 +6,7 @@
 * @link   https://github.com/jdlx/addon_template
 *
 * @package redaxo4.3
-* @version 0.2.0
+* @version 0.2.1
 */
 
 global $REX;
