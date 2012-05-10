@@ -20,8 +20,13 @@ $func    = rex_request('func',    'string');
 
 $myroot = $REX['INCLUDE_PATH'].'/addons/'.$mypage;
 
+// INCLUDES
+////////////////////////////////////////////////////////////////////////////////
+require_once($myroot.'/classes/class.rex_socket.inc.php');
+require_once($myroot.'/classes/class.github_connect.inc.php');
+
 
 // CONNECT GITHUB API
 ////////////////////////////////////////////////////////////////////////////////
-$gc = new github_connect('jdlx','addon_template');
+$gc = new a720_github_connect('jdlx','addon_template');
 echo $gc->getList(rex_request('chapter', 'string'));

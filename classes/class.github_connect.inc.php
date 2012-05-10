@@ -9,7 +9,7 @@
 * @version 0.2.1
 */
 
-class github_connect
+class a720_github_connect
 {
   private $error;
   private $access_method;
@@ -63,7 +63,7 @@ class github_connect
 
 
   /* constructor */
-  public function github_connect($repo_owner=false, $repo_name=false)
+  public function __construct($repo_owner=false, $repo_name=false)
   {
     global $REX;
 

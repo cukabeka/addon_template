@@ -33,7 +33,7 @@ $REX['ADDON'][$mypage]['VERSION'] = array
 (
 'VERSION'      => 0,
 'MINORVERSION' => 2,
-'SUBVERSION'   => 0,
+'SUBVERSION'   => 1,
 );
 $REX['ADDON']['version'][$mypage]     = implode('.', $REX['ADDON'][$mypage]['VERSION']);
 $REX['ADDON']['author'][$mypage]      = 'rexdev.de';
