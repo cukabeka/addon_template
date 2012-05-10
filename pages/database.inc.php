@@ -198,8 +198,8 @@ elseif (($func == 'edit' || $func == 'add') && $db_available)
   // Checkbox
   $checkbox = &$form->addCheckboxField('field_5');
   $checkbox->setLabel("Checkbox");
-  $checkbox->addOption('Ja',1);
-  $checkbox->addOption('Nein',0);
+  $checkbox->addOption('Ja','1');
+  $checkbox->addOption('Nein','0'); /* "0" als value nicht als integer benutzen! */
   $checkbox->addOption('Eventuell','evtl');
 
   // Radiobutton
