@@ -19,11 +19,11 @@ $func    = rex_request('func',    'string');
 // SUBNAVIGATION ITEMS
 ////////////////////////////////////////////////////////////////////////////////
 $chapterpages = array (
-''            => array('Readme'                       ,'README.textile'                           ,'textile'),
-'downloads'   => array('Downloads'                    ,'pages/github_api.inc.php'                 ,'php'),
-'issues'      => array('Issues'                       ,'pages/github_api.inc.php'                 ,'php'),
-'commits'     => array('Commits'                      ,'pages/github_api.inc.php'                 ,'php'),
-'wiki'        => array('Wiki'                         ,'https://github.com/gn2netwerk/rexseo/wiki','jsopenwin')
+''                => array('<em>TEXTILE include</em>'      ,'pages/_textile_include_example.textile'      ,'textile'),
+'text_demo'       => array('<em>TXT include</em>'          ,'pages/_txt_include_example.txt'              ,'txt'),
+'php_demo'        => array('<em>PHP include</em>'          ,'pages/_php_include_example.php'              ,'php'),
+'iframelink_demo' => array('<em>Link (iframe)</em>'        ,'http://rexdev.de/addons/addon-template.html' ,'iframe'),
+'newwinlink_demo' => array('<em>Link (neues Fenster)</em>' ,'http://rexdev.de/addons/addon-template.html' ,'jsopenwin')
 );
 
 // BUILD CHAPTER NAVIGATION

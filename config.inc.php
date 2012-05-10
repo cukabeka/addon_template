@@ -133,6 +133,7 @@ $REX['ADDON'][$mypage]['SUBPAGES'] = array (
   array (''         ,'Einstellungen'               ,''     ,''                   ,''),
   array ('database' ,'Datenbank'                   ,''     ,''                   ,''),
   array ('modul'    ,'Modul'                       ,''     ,''                   ,''),
+  array ('includes' ,'Include Beispiele'           ,''     ,''                   ,''),
+  array ('connector','Connector (faceless subpage)',''     ,array('faceless'=>1) ,'' /*array('class'=>'blafasel') can't di: rex_title bug*/),
   array ('help'     ,'Hilfe'                       ,''     ,''                   ,''),
-  array ('connector','Connector (faceless subpage)',''     ,array('faceless'=>1) ,array('class'=>'jsopenwin'))
 );
