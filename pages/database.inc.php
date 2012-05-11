@@ -87,7 +87,8 @@ $pagination = $REX['ADDON'][$mypage]['rex_list_pagination'];
 if($func == "" && $db_available)
 {
   /* LISTE ------------------------------------------------------------------ */
-   echo '<div class="rex-addon-output">
+   echo '
+   <div class="rex-addon-output" id="subpage-'.$subpage.'">
    <h2 class="rex-hl2">Übersicht <span style="color:silver;font-size:12px;">(DB Tabelle: '.$AddonDBTable.')</span></h2>';
 
   // alle Felder abfragen und anzeigen
@@ -148,7 +149,7 @@ elseif (($func == 'edit' || $func == 'add') && $db_available)
 {
   /* ADD/EDIT FORMULAR ------------------------------------------------------ */
 
-  echo '<div class="rex-addon-output">';
+  echo '<div class="rex-addon-output" id="subpage-'.$subpage.'">';
 
   // Pberschrift je nach Funktion ADD/EDIT
   if($func == 'edit')
@@ -239,6 +240,27 @@ elseif (($func == 'edit' || $func == 'add') && $db_available)
 
   $form->show();
 
-  echo '</div>';
+  echo '</div>
+<script>
+
+  (function($){
+
+    // REX_FORM FIELDSET TOGGLER
+    $(".rex-form fieldset legend").click(function(){
+      parent = $(this);
+      target = parent.next(".rex-form-wrapper");
+      target.toggle("fast",function(){
+        if(target.css("display")=="none"){
+          parent.addClass("closed");
+        }else{
+          parent.removeClass("closed");
+        }
+      });
+    });
+
+  })(jQuery);
+
+</script>
+  ';
 
 }

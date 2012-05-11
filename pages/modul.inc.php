@@ -77,7 +77,7 @@ if($modul_id > 0)
 }
 
 echo '
-<div class="rex-addon-output">
+<div class="rex-addon-output" id="subpage-'.$subpage.'">
   <h2 class="rex-hl2" style="font-size: 1em;">Modul Installer</h2>
 
   <div class="rex-addon-content">

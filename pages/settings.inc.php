@@ -118,7 +118,7 @@ $Linklist1 = $tmp->getHtml();
 
 
 echo '
-<div class="rex-addon-output">
+<div class="rex-addon-output" id="subpage-'.$subpage.'">
   <div class="rex-form">
 
   <form action="index.php" method="POST" id="settings">

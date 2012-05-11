@@ -118,6 +118,19 @@ span.jsopenwin {
   padding:0;
   }
 
+/* REX_FORM JS TOGGLE */
+#subpage-database .rex-form fieldset .rex-form-wrapper {
+  /*display:none;*/
+}
+#subpage-database .rex-form fieldset legend {
+  cursor:pointer;
+  padding-left:16px;
+  background:url('folder_toggle_triangle.png') no-repeat 0 -13px ;
+}
+#subpage-database .rex-form fieldset legend.closed {
+  background:url('folder_toggle_triangle.png') no-repeat 0 8px ;
+}
+
 /*GITHUB API*/
 .addon-template ul.github-api {
   list-style-type:none;
