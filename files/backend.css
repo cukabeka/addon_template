@@ -8,34 +8,28 @@
 * @version 0.2.1
 */
 
-/* OVERRIDES FÜR css_form.css */
-div.rex-form div.rex-form-row p.rex-form-radio label {
-  display:inline-block;
-  float:none;
-  margin:0 20px 0 0;
-  padding:5px 0 0 0;
-  width:auto;
-  }
-p.rex-form-col-a span {
+/* OVERRIDES FÜR floatende radio/checkbox @ css_form.css */
+#rex-addon-editmode.rex-form div.rex-form-row p.rex-form-checkbox.floated span,
+#rex-addon-editmode.rex-form div.rex-form-row p.rex-form-radio.floated span {
   clear: both;
   display: block;
   float: left;
   width: 145px;
   padding: 5px;
+  margin-bottom:0;
   }
-div.rex-form div.rex-form-row p.rex-form-checkbox label {
-  display:inline-block;
-  margin:0 20px 0 0;
-  padding:5px 0 0 0;
-  width:auto;
-  }
-div.rex-form-row p.rex-form-label-right input.rex-form-checkbox {
+#rex-addon-editmode.rex-form div.rex-form-row p.rex-form-label-right.floated input.rex-form-checkbox,
+#rex-addon-editmode.rex-form div.rex-form-row p.rex-form-label-right.floated input.rex-form-radio {
   margin: 4px 5px 0 0;
   float:left;
   clear:none;
   }
-div.rex-form-row p.rex-form-label-right label {
-  margin: 3px 0 0 0;
+#rex-addon-editmode.rex-form div.rex-form-row p.rex-form-checkbox.floated label,
+#rex-addon-editmode.rex-form div.rex-form-row p.rex-form-radio.floated label {
+  display:inline-block;
+  margin:0 20px 0 0;
+  padding:5px 0 0 0;
+  width:auto;
   }
 
 /* ADDON HEADLINE */

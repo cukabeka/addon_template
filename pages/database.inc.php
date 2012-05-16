@@ -199,13 +199,15 @@ elseif (($func == 'edit' || $func == 'add') && $db_available)
   // Checkbox
   $checkbox = &$form->addCheckboxField('field_5');
   $checkbox->setLabel("Checkbox");
+  $checkbox->setAttribute('class','rex-form-checkbox rex-form-label-right floated');
   $checkbox->addOption('Ja','1');
-  $checkbox->addOption('Nein','0'); /* "0" als value nicht als integer benutzen! */
+  $checkbox->addOption('Nein','0'); /* "0" als string nicht als integer benutzen! */
   $checkbox->addOption('Eventuell','evtl');
 
   // Radiobutton
   $radio = &$form->addRadioField('field_6');
   $radio->setLabel("Radiobutton");
+  $radio->setAttribute('class','rex-form-radio rex-form-label-right floated');
   $radio->addOption('Ja',1);
   $radio->addOption('Nein',0);
   $radio->addOption('Eventuell','evtl');
