@@ -17,7 +17,6 @@ $mypage = rex_request('addonname','string');
 ////////////////////////////////////////////////////////////////////////////////
 $requiered_REX = '4.3.1';
 $requiered_PHP = 5;
-$requiered_addons = array('textile');
 $do_install = true;
 
 // CHECK REDAXO VERSION
@@ -39,7 +38,7 @@ if (intval(PHP_VERSION) < $requiered_PHP)
 	$do_install = false;
 }
 
-// CHECK REQUIERED ADDONS
+// CHECK REQUIRED ADDONS
 ////////////////////////////////////////////////////////////////////////////////
 foreach($requiered_addons as $a)
 {

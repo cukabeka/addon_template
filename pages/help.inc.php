@@ -19,11 +19,7 @@ $func    = rex_request('func',    'string');
 // SUBNAVIGATION ITEMS
 ////////////////////////////////////////////////////////////////////////////////
 $chapterpages = array (
-''            => array('Readme'                       ,'README.textile'                           ,'textile'),
-'downloads'   => array('Downloads'                    ,'pages/github_api.inc.php'                 ,'php'),
-'issues'      => array('Issues'                       ,'pages/github_api.inc.php'                 ,'php'),
-'commits'     => array('Commits'                      ,'pages/github_api.inc.php'                 ,'php'),
-'wiki'        => array('Wiki'                         ,'https://github.com/gn2netwerk/rexseo/wiki','jsopenwin')
+''            => array('Readme'                       ,'README.textile'                           ,'textile')
 );
 
 // BUILD CHAPTER NAVIGATION
