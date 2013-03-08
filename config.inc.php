@@ -3,7 +3,7 @@
 * Addon_Template
 *
 * @author http://rexdev.de
-* @link   https://github.com/jdlx/addon_template
+* @link   https://github.com/cukabeka
 *
 * @package redaxo4.3
 * @version 0.2.1
@@ -25,15 +25,15 @@ $myroot = $REX['INCLUDE_PATH'].'/addons/'.$mypage.'/';
 
 // ADDON REX COMMONS
 ////////////////////////////////////////////////////////////////////////////////
-$REX['ADDON']['rxid'][$mypage] = '720';
+$REX['ADDON']['rxid'][$mypage] = 'rex_less';
 $REX['ADDON']['page'][$mypage] = $mypage;
-$REX['ADDON']['name'][$mypage] = $mypage;
+$REX['ADDON']['name'][$mypage] = 'rexLESS';
 $Revision = '';
 $REX['ADDON'][$mypage]['VERSION'] = array
 (
 'VERSION'      => 0,
-'MINORVERSION' => 2,
-'SUBVERSION'   => 1,
+'MINORVERSION' => 3,
+'SUBVERSION'   => 8,
 );
 $REX['ADDON']['version'][$mypage]     = implode('.', $REX['ADDON'][$mypage]['VERSION']);
 $REX['ADDON']['author'][$mypage]      = 'rexdev.de';
@@ -41,6 +41,8 @@ $REX['ADDON']['supportpage'][$mypage] = 'forum.redaxo.de';
 $REX['ADDON']['perm'][$mypage]        = $mypage.'[]';
 $REX['PERM'][]                        = $mypage.'[]';
 
+$REX['ADDON'][$mypage]['myroot'] = $myroot;
+$REX['ADDON'][$mypage]['cache'] = $myroot."cache";
 
 // STATIC ADDON SETTINGS
 ////////////////////////////////////////////////////////////////////////////////
@@ -58,43 +60,20 @@ $REX['ADDON'][$mypage]['params_cast'] = array (
 // DYNAMISCHE SETTINGS
 ////////////////////////////////////////////////////////////////////////////////
 // --- DYN
-$REX["ADDON"]["addon_template"]["settings"] = array (
-  'TEXTINPUT' =>
+$REX["ADDON"]["rex_less"]["settings"] = array (
+  'TEXTINPUT' => 
   array (
-    1 => 'Textfeld 1',
+    1 => 'files',
   ),
-  'TEXTAREA' =>
+  'SELECT' => 
   array (
-    1 => 'Textarea 1',
+    1 => 'classic',
   ),
-  'SELECT' =>
-  array (
-    1 => '1',
-  ),
-  'MULTISELECT' =>
-  array (
-    1 =>
-    array (
-      0 => '1',
-    ),
-  ),
-  'MEDIA' =>
+  'MEDIA' => 
   array (
     1 => '',
   ),
-  'MEDIALIST' =>
-  array (
-    1 => '',
-  ),
-  'LINK' =>
-  array (
-    1 => '',
-  ),
-  'LINK_NAME' =>
-  array (
-    1 => '',
-  ),
-  'LINKLIST' =>
+  'MEDIALIST' => 
   array (
     1 => '',
   ),
@@ -104,17 +83,7 @@ $REX["ADDON"]["addon_template"]["settings"] = array (
 
 // AUTO INCLUDE FUNCTIONS & CLASSES
 ////////////////////////////////////////////////////////////////////////////////
-if ($REX['REDAXO'])
 {
-  $pattern = $myroot.'functions/function.*.inc.php';
-  $include_files = glob($pattern);
-  if(is_array($include_files) && count($include_files) > 0){
-     foreach ($include_files as $include)
-     {
-       require_once $include;
-     }
-  }
-
   $pattern = $myroot.'classes/class.*.inc.php';
   $include_files = glob($pattern);
 
@@ -124,16 +93,22 @@ if ($REX['REDAXO'])
        require_once $include;
      }
   }
+
+  $pattern = $myroot.'functions/function.*.inc.php';
+  $include_files = glob($pattern);
+  if(is_array($include_files) && count($include_files) > 0){
+     foreach ($include_files as $include)
+     {
+       require_once $include;
+     }
+  }
+
 }
 
 // SUBPAGES
 //////////////////////////////////////////////////////////////////////////////
 $REX['ADDON'][$mypage]['SUBPAGES'] = array (
   //     subpage    ,label                         ,perm   ,params               ,attributes
-  array (''         ,'Einstellungen'               ,''     ,''                   ,''),
-  array ('database' ,'Datenbank'                   ,''     ,''                   ,''),
-  array ('modul'    ,'Modul'                       ,''     ,''                   ,''),
-  array ('includes' ,'Include Beispiele'           ,''     ,''                   ,''),
-  array ('connector','Connector (faceless subpage)',''     ,array('faceless'=>1) ,'' /*array('class'=>'blafasel') can't di: rex_title bug*/),
-  array ('help'     ,'Hilfe'                       ,''     ,''                   ,''),
+  array (''         ,'Settings'               ,''     ,''                   ,''),
+  array ('help'     ,'Help'                       ,''     ,''                   ,''),
 );
