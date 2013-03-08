@@ -25,7 +25,11 @@ $myroot = $REX['INCLUDE_PATH'].'/addons/'.$mypage.'/';
 
 // ADDON REX COMMONS
 ////////////////////////////////////////////////////////////////////////////////
+<<<<<<< HEAD
 $REX['ADDON']['rxid'][$mypage] = 'rex_less';
+=======
+$REX['ADDON']['rxid'][$mypage] = 'rex_LESS';
+>>>>>>> d65427a87cb5f24c9ad40c04e553a371effa3232
 $REX['ADDON']['page'][$mypage] = $mypage;
 $REX['ADDON']['name'][$mypage] = 'rexLESS';
 $Revision = '';
@@ -60,6 +64,7 @@ $REX['ADDON'][$mypage]['params_cast'] = array (
 // DYNAMISCHE SETTINGS
 ////////////////////////////////////////////////////////////////////////////////
 // --- DYN
+<<<<<<< HEAD
 $REX["ADDON"]["rex_less"]["settings"] = array (
   'TEXTINPUT' => 
   array (
@@ -77,6 +82,25 @@ $REX["ADDON"]["rex_less"]["settings"] = array (
   array (
     1 => '',
   ),
+=======
+$REX["ADDON"][$mypage]["settings"] = array (
+  'TEXTINPUT' =>
+  array (
+    1 => 'files', 
+  ),
+  'SELECT' =>
+  array (
+    1 => '1',
+  ),
+  'MEDIA' =>
+  array (
+    1 => '',
+  ),
+  'MEDIALIST' =>
+  array (
+    1 => '',
+  )
+>>>>>>> d65427a87cb5f24c9ad40c04e553a371effa3232
 );
 // --- /DYN
 

@@ -45,10 +45,15 @@ $id = 1;                                                      // ID dieser Selec
 $tmp = new rex_select();                                      // rex_select Objekt initialisieren
 $tmp->setSize(1);                                             // 1 Zeilen = normale Selectbox
 $tmp->setName('SELECT['.$id.']');
+<<<<<<< HEAD
 $tmp->addOption('none',FALSE);                                    // Beschreibung ['string'], Wert [int|'string']
 $tmp->addOption('standard - lessphp’s original formatter','classic');
 $tmp->addOption('minify - Compresses all the unrequired whitespace','compressed');
 $tmp->addOption('lessjs - Same style used in LESS for JavaScript','lessjs');
+=======
+$tmp->addOption('nein',0);                                    // Beschreibung ['string'], Wert [int|'string']
+$tmp->addOption('ja',1);
+>>>>>>> d65427a87cb5f24c9ad40c04e553a371effa3232
 $tmp->setSelected($myREX['settings']['SELECT'][$id]);         // gespeicherte Werte einsetzen
 $select = $tmp->get();                                        // HTML in Variable speichern
 
@@ -129,13 +134,21 @@ echo '
           </div><!-- .rex-form-wrapper -->
         </fieldset>
 
+<<<<<<< HEAD
         <fieldset class="rex-form-col-1">
+=======
+        <fieldset class="rex-form-col-1"  style="display:none;">
+>>>>>>> d65427a87cb5f24c9ad40c04e553a371effa3232
           <legend>Aktiv</legend>
           <div class="rex-form-wrapper">
 
             <div class="rex-form-row">
               <p class="rex-form-col-a rex-form-select">
+<<<<<<< HEAD
                 <label for="select">Minify CSS Output?</label>
+=======
+                <label for="select">Addon aktiv?</label>
+>>>>>>> d65427a87cb5f24c9ad40c04e553a371effa3232
                 '.$select.'
               </p>
             </div><!-- .rex-form-row -->
@@ -149,7 +162,11 @@ echo '
 
             <div class="rex-form-row" >
               <div class="rex-form-col-a">
+<<<<<<< HEAD
               <label for="REX_MEDIA_1">LESS File from Mediapool</label>
+=======
+              <label for="REX_MEDIA_1">LESS-Datei aus Medienpool in CSS im Zielverzeichnis konvertieren</label>
+>>>>>>> d65427a87cb5f24c9ad40c04e553a371effa3232
             '.$MediaButton1.'
               </div><!-- .rex-form-col-a -->
             </div><!-- .rex-form-row -->
